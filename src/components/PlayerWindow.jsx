@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FaForwardStep, FaBackwardStep } from "react-icons/fa6";
-import { FaPlay,FaPause,FaVolumeMute,FaVolumeDown,FaVolumeUp } from "react-icons/fa";
+import { FaPlay,FaPause,FaVolumeDown,FaVolumeUp } from "react-icons/fa";
 
 const PlayerWindow = () => {
   const songs = [
@@ -44,10 +44,6 @@ const PlayerWindow = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const toggleMute = () => {
-    audioRef.current.muted = !isMuted;
-    setIsMuted(!isMuted);
-  };
 
   const handleSeek = (event) => {
     audioRef.current.currentTime = event.target.value;
